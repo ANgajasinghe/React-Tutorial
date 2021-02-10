@@ -16,6 +16,9 @@ const rootReducer = combineReducers({
     res: resultReducer
 });
 
+
+// Start Advanced React 
+
 const store = createStore(rootReducer);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
