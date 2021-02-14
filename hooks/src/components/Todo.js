@@ -5,17 +5,18 @@ import React , {useState} from 'react';
 const Todo = prop => {
 
     // this will take initial state
-    const inputState = useState('');
+    // useState -02
+    const [todoName, setTodoName] = useState('');
 
 
     const inputChangeHandler = (event) => {
-        inputState[1](event.target.value)
-        console.log(inputState);
+        setTodoName(event.target.value);
+        console.log(todoName);
     }
 
         // Like Aux allow us to return top level  
     return <React.Fragment>
-        <input type="text" placeholder="Todo" onChange={inputChangeHandler}  value={inputState[0]}/>
+        <input type="text" placeholder="Todo" onChange={inputChangeHandler}  value={todoName}/>
         <button type="button"> Add </button>
 
         <ul>
